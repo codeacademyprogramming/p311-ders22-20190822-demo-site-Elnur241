@@ -1,0 +1,103 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css");
+@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+a {
+  text-decoration: none !important;
+}
+
+.p311-header .p311-logo > a {
+  border: 2px solid #25262a;
+  padding: 8px;
+  text-decoration: none;
+  color: #25262a;
+  text-transform: uppercase;
+}
+
+nav.p311-nav > ul.nav > li {
+  padding: 10px 5px;
+}
+
+nav.p311-nav > ul.nav > li > a {
+  color: #25262a;
+  text-decoration: none !important;
+  padding: 10px;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+nav.p311-nav > ul.nav > li > ul {
+  display: none;
+  border-top: 2px solid #ee4266;
+}
+
+nav.p311-nav > ul.nav > li.p311-dropdown-menu {
+  position: relative;
+}
+
+nav.p311-nav > ul.nav > li.p311-dropdown-menu > a::after {
+  content: "\f078";
+}
+
+nav.p311-nav > ul.nav > li.p311-dropdown-menu:hover > a, nav.p311-nav > ul.nav > li.p311-dropdown-menu.active > a {
+  color: #ee4266;
+}
+
+nav.p311-nav > ul.nav > li.p311-dropdown-menu:hover > ul, nav.p311-nav > ul.nav > li.p311-dropdown-menu.active > ul {
+  width: 200px;
+  display: block;
+  border-top: 2px solid #ee4266;
+  position: absolute;
+  margin-top: 50px;
+  z-index: 1000;
+}
+
+nav.p311-nav > ul.nav > li.p311-dropdown-menu:hover > ul > li > a, nav.p311-nav > ul.nav > li.p311-dropdown-menu.active > ul > li > a {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px 5px;
+  display: block;
+  color: #7f8fa6;
+}
+
+nav.p311-nav > ul.nav > li.p311-dropdown-menu:hover > ul > li > a:hover, nav.p311-nav > ul.nav > li.p311-dropdown-menu.active > ul > li > a:hover {
+  background: #f4f5f9;
+  color: #25262a;
+}
+
+.p311-icons > a {
+  color: #868995;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.p311-icons > a.bag {
+  position: relative;
+}
+
+.p311-icons > a.bag > .shop-bag-count {
+  position: absolute;
+  background-color: #ee4266;
+  border-radius: 50%;
+  color: white;
+  width: 17px;
+  height: 17px;
+  line-height: 17px;
+  text-align: center;
+  font-weight: 600;
+  top: -6px;
+  right: -16px;
+}
+
+[class*="p311-icons"] {
+  font: normal normal normal 14px/1 FontAwesome;
+}
+
+.p311-icons-heart::after {
+  content: "\f08a";
+}
+
+.p311-icons-bag::after {
+  content: "\f290";
+}
+/*# sourceMappingURL=style.css.map */
