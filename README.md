@@ -12,3 +12,10 @@ https://flatuicolors.com/palette/gb
 
 https://offroadcode.com/rem-calculator
 https://jwilsson.com/unit-converter/
+
+
+<!-- fonts -->
+https://fonts.google.com/
+
+
+https://getbootstrap.com/docs/4.0/utilities/text/

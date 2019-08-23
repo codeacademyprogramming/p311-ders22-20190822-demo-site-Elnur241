@@ -1,11 +1,28 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css");
 @import url("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
 @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+.color-red {
+  background-color: red;
+  height: 200px;
+  border: 1px solid white;
+}
+.color-green {
+  background-color: green;
+  height: 100px;
+  border: 1px solid white;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
 
 a {
   text-decoration: none !important;
 }
 
+// header
 .p311-header {
   & .p311-logo {
     & > a {
@@ -26,19 +43,21 @@ nav.p311-nav {
         color: #25262a;
         text-decoration: none !important;
         padding: 10px;
-        font-size: 16px;
+        font-size: 14px;
         text-transform: uppercase;
         letter-spacing: 0.05em;
       }
 
       & > ul {
+        transition: display, opacity 10s;
         display: none;
+        opacity: 0;
         border-top: 2px solid #ee4266;
       }
     }
 
     & > li.p311-dropdown-menu {
-        position: relative;
+      position: relative;
       & > a {
         &::after {
           content: "\f078";
@@ -51,12 +70,14 @@ nav.p311-nav {
           color: #ee4266;
         }
         & > ul {
+          transition: display, opacity 10s;
           width: 200px;
           display: block;
+          opacity: 1;
           border-top: 2px solid #ee4266;
           position: absolute;
-          margin-top: 50px;
-          z-index:1000;
+          margin-top: 10px;
+          z-index: 1000;
 
           & > li {
             & > a {
@@ -82,19 +103,6 @@ nav.p311-nav {
     color: #868995;
     padding: 5px;
     text-decoration: none;
-
-    // & > .bag {
-    //   position: relative;
-
-    //   & > .chart-count {
-    //     position: absolute;
-    //     top: 0;
-    //     background-color: #ee4266;
-    //     width: 30px;
-    //     height: 30px;
-    //     border-radius: 50%;
-    //   }
-    // }
   }
 
   & > a.bag {
@@ -114,9 +122,10 @@ nav.p311-nav {
     }
   }
 }
-
-[class*="p311-icons"] {
-  font: normal normal normal 14px/1 FontAwesome;
+[class*="p311-icons"],
+.p311-dropdown-menu a::before,
+.p311-dropdown-menu a::after {
+  font: normal normal normal 16px/1 FontAwesome;
 }
 
 .p311-icons-heart {
@@ -127,5 +136,58 @@ nav.p311-nav {
 .p311-icons-bag {
   &::after {
     content: "\f290";
+  }
+}
+
+// cover
+
+.p311-cover {
+  background-color: #f9f9f9;
+  height: calc(100vh - 174px);
+  min-height: 600px;
+  overflow: hidden;
+
+  & .cover-title {
+    text-align: center;
+    & > h2 {
+      font-size: 1em;
+    }
+
+    & > h1 {
+      font-weight: bold;
+      font-size: 4em;
+      margin-bottom: 0.5em;
+    }
+
+    & a {
+      padding: 12px 30px;
+      background: #000;
+      color: #fff;
+    }
+  }
+}
+
+.p311-img-fluid {
+  height: calc(100vh - 174px);
+  overflow: hidden;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../img/model_3.png);
+  background-position: center;
+}
+
+.col-lg-6 .p311-img-fluid {
+  background-size: cover;
+  background-position: top;
+}
+
+// discover
+.p311-discover {
+  height: 600px;
+  .title-section {
+    & > h1 {
+      border-left: 4px solid #ee4266;
+      padding-left: 10px;
+    }
   }
 }
